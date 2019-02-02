@@ -1,12 +1,12 @@
-const Header = () => <h1>Pomodoro Timer</h1>
+const Header = () => <h1>Pomodoro Time</h1>
 
 const SetTimer = ({ type, value, handleClick }) =>  (
       <div className='SetTimer'>
         <div id={`${type}-label`}> {type === 'session' ? 'Session ' : 'Break '}Length </div>
         <div className='SetTimer-controls'>
-          <button id={`${type}-decrement`} onClick={() => handleClick(false, `${type}Value`)}>&darr;</button>
+          <button id={`${type}-decrement`} onClick={() => handleClick(false, `${type}Value`)}>-</button>
           <div id={`${type}-length`}>{ value }</div>
-          <button id={`${type}-increment`} onClick={() => handleClick(true, `${type}Value`)}>&uarr;</button>
+          <button id={`${type}-increment`} onClick={() => handleClick(true, `${type}Value`)}>+</button>
         </div>
       </div>
   )
@@ -100,7 +100,7 @@ class App extends React.Component {
         <Header/>
         <div className='settings'>
           <SetTimer type='break' value={this.state.breakValue} handleClick={this.handleSetTimers}/>
-          <SetTimer type='session' value={this.state.sessionValue} handleClick={this.handleSetTimers}/>
+          
         </div>
         <Timer mode={ this.state.mode} time={ moment(this.state.time).format('mm:ss') }/>
         <Controls 
