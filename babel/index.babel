@@ -1,4 +1,4 @@
-const Header = () => <h1>Pomodoro Time</h1>
+const Header = () => <h1>Pomodoro Timer</h1>
 
 const SetTimer = ({ type, value, handleClick }) =>  (
       <div className='SetTimer'>
@@ -117,6 +117,6 @@ class App extends React.Component {
       </div>
     )
   }
-}
+}//<SetTimer type='session' value={this.state.sessionValue} handleClick={this.handleSetTimers}/>
 
 ReactDOM.render(<App/>, document.getElementById('root'))
