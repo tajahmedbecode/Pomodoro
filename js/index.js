@@ -4,9 +4,9 @@ var SetTimer = function SetTimer(_ref) {var type = _ref.type,value = _ref.value,
     React.createElement('div', { className: 'SetTimer' },
       React.createElement('div', { id: type + '-label' }, ' ', type === 'session' ? 'Session ' : 'Break ', 'Length '),
       React.createElement('div', { className: 'SetTimer-controls' },
-        React.createElement('button', { id: type + '-decrement', onClick: function onClick() {return handleClick(false, type + 'Value');} }, '\u2193'),
+        React.createElement('button', { id: type + '-decrement', onClick: function onClick() {return handleClick(false, type + 'Value');} }, '-'),
         React.createElement('div', { id: type + '-length' }, value),
-        React.createElement('button', { id: type + '-increment', onClick: function onClick() {return handleClick(true, type + 'Value');} }, '\u2191'))));};
+        React.createElement('button', { id: type + '-increment', onClick: function onClick() {return handleClick(true, type + 'Value');} }, '+'))));};
 
 
 
@@ -99,8 +99,8 @@ App = function (_React$Component) {_inherits(App, _React$Component);
         React.createElement('div', null,
           React.createElement(Header, null),
           React.createElement('div', { className: 'settings' },
-            React.createElement(SetTimer, { type: 'break', value: this.state.breakValue, handleClick: this.handleSetTimers }),
-            React.createElement(SetTimer, { type: 'session', value: this.state.sessionValue, handleClick: this.handleSetTimers })),
+            React.createElement(SetTimer, { type: 'break', value: this.state.breakValue, handleClick: this.handleSetTimers })),
+
 
           React.createElement(Timer, { mode: this.state.mode, time: moment(this.state.time).format('mm:ss') }),
           React.createElement(Controls, {
@@ -117,6 +117,6 @@ App = function (_React$Component) {_inherits(App, _React$Component);
 
 
     } }]);return App;}(React.Component);
-
+//<SetTimer type='session' value={this.state.sessionValue} handleClick={this.handleSetTimers}/>
 
 ReactDOM.render(React.createElement(App, null), document.getElementById('root'));
