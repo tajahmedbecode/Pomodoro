@@ -62,8 +62,8 @@ App = function (_React$Component) {_inherits(App, _React$Component);
     handleReset = function () {
       _this.setState({
         breakValue: 5,
-        sessionValue: 25,
-        time: 1000 * 60 * 25,
+        sessionValue: 20,
+        time: 1000 * 60 * 20,
         touched: false,
         active: false,
         mode: 'session' });
@@ -92,7 +92,7 @@ App = function (_React$Component) {_inherits(App, _React$Component);
 
         }
       }
-    };_this.state = { breakValue: 5, sessionValue: 25, mode: 'session', time: 1000 * 60 * 25, active: false, touched: false };return _this;}_createClass(App, [{ key: 'componentDidUpdate', value: function componentDidUpdate(prevProps, prevState) {if (prevState.time === 0 && prevState.mode === 'session') {this.setState({ time: this.state.breakValue * 60 * 1000, mode: 'break' });this.audio.play();}if (prevState.time === 0 && prevState.mode === 'break') {this.setState({ time: this.state.sessionValue * 60 * 1000, mode: 'session' });this.audio.play();}} }, { key: 'render', value: function render()
+    };_this.state = { breakValue: 5, sessionValue: 20, mode: 'session', time: 1000 * 60 * 20, active: false, touched: false };return _this;}_createClass(App, [{ key: 'componentDidUpdate', value: function componentDidUpdate(prevProps, prevState) {if (prevState.time === 0 && prevState.mode === 'session') {this.setState({ time: this.state.breakValue * 60 * 1000, mode: 'break' });this.audio.play();}if (prevState.time === 0 && prevState.mode === 'break') {this.setState({ time: this.state.sessionValue * 60 * 1000, mode: 'session' });this.audio.play();}} }, { key: 'render', value: function render()
 
     {var _this2 = this;
       return (

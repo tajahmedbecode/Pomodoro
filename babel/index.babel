@@ -33,9 +33,9 @@ class App extends React.Component {
     super(props)
     this.state = {
       breakValue: 5,
-      sessionValue: 25,
+      sessionValue: 20,
       mode: 'session',
-      time: 1000 * 60 * 25,
+      time: 1000 * 60 * 20,
       active: false,
       touched: false,
       
@@ -62,8 +62,8 @@ class App extends React.Component {
   handleReset = () => {
     this.setState({ 
       breakValue: 5, 
-      sessionValue: 25, 
-      time: 1000 * 60 * 25,
+      sessionValue: 20, 
+      time: 1000 * 60 * 20,
       touched: false,
       active: false,
       mode: 'session'
